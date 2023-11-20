@@ -16,18 +16,11 @@ function App() {
     .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
-  /*useEffect(() => {
-    // Fetch data from the API
-    fetch('https://my-json-server.typicode.com/John-Mwau/Bot-Battlr/bots')
-    .then((resp) => resp.json())
-    .then((data) => setBots(data))
-    .catch((error) => console.error('Error fetching data:', error));
-}, []);
-*/
-const releaseFromArmy = (updatedEnlistedBots) => {
-  // Implement the logic to release bots from the army
+    const releaseFromArmy = (updatedEnlistedBots) =>{
+      // Implement the logic to release bots from the army
   setEnlistedBots(updatedEnlistedBots);
-};
+    };
+  
 
 function handleBotDischarge(bot) {
   // Remove the bot from enlistedBots in the frontend
