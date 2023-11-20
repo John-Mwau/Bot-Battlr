@@ -21,13 +21,11 @@ function App() {
   setEnlistedBots(updatedEnlistedBots);
     };
   
-
-function handleBotDischarge(bot) {
-  // Remove the bot from enlistedBots in the frontend
+    function handleBotDischarge (bot){
+      // Remove the bot from enlistedBots in the frontend
   const updatedEnlistedBots = enlistedBots.filter((enlistedBot) => enlistedBot.id !== bot.id);
   setEnlistedBots(updatedEnlistedBots);
-}
- 
+    }
 
   return (
     <div className="App">
