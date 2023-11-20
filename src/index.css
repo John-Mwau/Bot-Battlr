@@ -1,13 +1,157 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap");
+
+:root {
+  --dark-one: #333;
+  --dark-two: #7a7a7a;
+  --dark-three: #0f0c16;
+  --main-color: #777a09b9;
+  --light-one: #fff;
+  --light-two: #f9fafb;
+  --light-three: #f6f7fb;
+  --light-four: #c360b9;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Style the "Bot Collection" header */
+.BotCollection h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background-color: #b5f3f5;
+}
+
+.BotCollection {
+  width: 100%;
+  margin-bottom: 20px; /* Add spacing between BotCollection and BotArmy */
+}
+
+.bot-army {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+  padding: 20px;
+  border-top: 1px solid #ccc; /* Add a top border to separate BotCollection and BotArmy */
+  border-bottom: 2px solid #333;
+  background-color: var(--light-four);
+  color: var(--dark-three);
+}
+
+/* Style the horizontal layout for BotCollection items */
+.BotCollection ul.bot-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Style each bot card in BotCollection with box shadow */
+.BotCollection li {
+  list-style: none;
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  max-width: 300px;
+  box-shadow: 0 0 5px rgba(26, 1, 1, 0.2);
+  background-color: var(--main-color);
+  color: var(--dark-three);
+  border-radius: 10px;
+}
+
+.BotCollection li:hover {
+  transform: scale(1.05);
+}
+
+/* Style the horizontal layout for BotArmy items */
+.bot-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Style each bot card in BotArmy with box shadow */
+.bot-card {
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  max-width: 300px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.497);
+  border-radius: 10px;
+}
+
+.bot-card:hover {
+  transform: scale(1.05);
+}
+
+.icon.health-icon {
+  font-size: 20px;
+}
+
+.icon.damage-icon {
+  font-size: 20px;
+}
+
+.icon.armor-icon {
+  font-size: 20px;
+}
+
+.icon.bot-class-icon {
+  font-size: 20px;
+}
+
+.discharge-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 15%;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.discharge-button:hover {
+  background-color: darkred;
 }
