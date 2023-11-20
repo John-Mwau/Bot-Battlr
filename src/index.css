@@ -52,7 +52,7 @@ h2 {
   justify-content: center;
   padding: 20px;
   font-family: "Poppins", sans-serif;
-  background-color: #b5f3f5;
+  background-color: hsla(69, 100%, 100%, 1);
 }
 
 .BotCollection {
@@ -68,7 +68,7 @@ h2 {
   padding: 20px;
   border-top: 1px solid #ccc; /* Add a top border to separate BotCollection and BotArmy */
   border-bottom: 2px solid #333;
-  background-color: var(--light-four);
+  background-color: greenyellow;
   color: var(--dark-three);
 }
 

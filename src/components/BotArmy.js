@@ -17,7 +17,7 @@ export default function BotArmy({ bots, releaseFromYourBotArmy, enlistedBots}){
 
     return (
       <div className="bot-army">
-        <h2>Bot Battlr | Your Bot Army</h2>
+        <h2>Single Bot</h2>
       {groupedBots.map((group, index) => (
         <div key={index} className="bot-row">
           {group.map((bot) => (
@@ -31,16 +31,16 @@ export default function BotArmy({ bots, releaseFromYourBotArmy, enlistedBots}){
               {/* <p className="catchphrase">Catchphrase: {bot.catchphrase}</p> */}
               <div className="bot-details">
                 <p>
-                  <span className="icon health-icon">❤️</span> Health: {bot.health}
+                   Health: {bot.health}
                 </p>
                 <p>
-                  <span className="icon damage-icon">💥</span> Damage: {bot.damage}
+                   Damage: {bot.damage}
                 </p>
                 <p>
-                  <span className="icon armor-icon">🛡️</span> Armor: {bot.armor}
+                  Armor: {bot.armor}
                 </p>
                 <p>
-                  <span className="icon bot-class-icon"> 👾 </span> Class: {bot.bot_class}
+                   Class: {bot.bot_class}
                 </p>
               </div>
             </div>
