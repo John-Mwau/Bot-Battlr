@@ -2,9 +2,14 @@ import React from "react";
 import SingleBot from "./SingleBot";
 
 export default function BotCollection ({ bots, enlistedBots, setEnlistedBots, handleBotDischarge }) {
+  // Check if bots is an array
+  if (!Array.isArray(bots)) {
+    console.error("Error: 'bots' is not an array");
+    return null; // or display an error message
+  }
 
-    return (
-<div className="BotCollection">
+  return (
+    <div className="BotCollection">
       <h2>Bot Battlr | Bot Collection</h2>
       <ul className="bot-collection">
         {bots.map((bot) => (
@@ -19,8 +24,5 @@ export default function BotCollection ({ bots, enlistedBots, setEnlistedBots, ha
         ))}
       </ul>
     </div>
-    )
-} ;
-
-
-
+  );
+};
